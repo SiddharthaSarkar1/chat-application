@@ -20,7 +20,7 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(inputs);
+    // console.log(inputs);
     await signup(inputs);
   };
 
@@ -34,7 +34,9 @@ const SignUp = () => {
         <form onSubmit={handleSubmit}>
           <div>
             <label className="label p-2">
-              <span className="text-base label-text">Full Name</span>
+              <span className="text-base label-text text-gray-300">
+                Full Name
+              </span>
             </label>
             <input
               type="text"
@@ -49,7 +51,9 @@ const SignUp = () => {
 
           <div>
             <label className="label p-2 ">
-              <span className="text-base label-text">Username</span>
+              <span className="text-base label-text text-gray-300">
+                Username
+              </span>
             </label>
             <input
               type="text"
@@ -64,7 +68,9 @@ const SignUp = () => {
 
           <div>
             <label className="label">
-              <span className="text-base label-text">Password</span>
+              <span className="text-base label-text text-gray-300">
+                Password
+              </span>
             </label>
             <input
               type="password"
@@ -79,7 +85,9 @@ const SignUp = () => {
 
           <div>
             <label className="label">
-              <span className="text-base label-text">Confirm Password</span>
+              <span className="text-base label-text text-gray-300">
+                Confirm Password
+              </span>
             </label>
             <input
               type="password"
@@ -101,7 +109,7 @@ const SignUp = () => {
 
           <Link
             to="/login"
-            className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block"
+            className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block text-gray-300"
           >
             Already have an account?
           </Link>
@@ -110,6 +118,7 @@ const SignUp = () => {
             <button
               type="submit"
               className="btn btn-block btn-sm mt-2 border border-slate-700"
+              disabled={loading}
             >
               {loading ? (
                 <span className="loading loading-spinner"></span>

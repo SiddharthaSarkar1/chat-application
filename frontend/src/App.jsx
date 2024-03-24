@@ -28,6 +28,11 @@ function App() {
         </Routes>
         <Toaster />
       </div>
+      <div className="absolute right-0 bottom-0">
+        <p className="text-sm text-black font-bold mr-2 animate-pulse">
+          Designed & Developed by Siddhartha Sarkar
+        </p>
+      </div>
     </>
   );
 }
